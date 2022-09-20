@@ -1,16 +1,38 @@
-# Vue 3 + TypeScript + Vite
+# Surrealdb.vue
+This is a surrealdb client build for VueJS!
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+> This is WIP. If you have ideas / suggestions please open an issue!
 
-## Recommended IDE Setup
+## Install
+Simpy install the `surrealdb.vue` npm-package. We require the install of the `vue` (version >= 3.2) and `surrealdb.js` (version >= 0.4) packages.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+```sh
+# npm
+npm i surrealdb.vue surrealdb.js vue
 
-## Type Support For `.vue` Imports in TS
+# pnpm
+pnpm i surrealdb.vue surrealdb.js vue
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+# yarn
+yarn add surrealdb.vue surrealdb.js vue
+```
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+## API
+### Client
+We export the Client of `surrealdb.js` nearly as is. For more info look at the docs of `surrealdb.js`.
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+### Functions
+We export functions `query` and `queryLive` that return reactive data. 
+
+> Note: `queryLive` is currently a copy of `query` and is currently not live!
+
+The return has the form of 
+
+```ts
+interface VueReturn<T> {
+    loading: Ref<boolean>;
+    data: ShallowRef<T[] | null>;
+    error: Ref<any>;
+    reload: () => void;
+}
+```

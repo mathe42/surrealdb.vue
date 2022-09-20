@@ -1,13 +1,27 @@
 {
   "name": "surrealdb.vue",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "author": {
+    "email": "2pi_r2@gmx.de",
+    "name": "Sebastian Krüger",
+    "url": "https://www.github.com/mathe42"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/mathe42/surrealdb.vue"
+  },
+  "bugs": {
+    "url": "https://www.github.com/mathe42/surrealdb.vue/issues"
+  },
+  "homepage": "https://github.com/mathe42/surrealdb.vue#readme",
   "exports": {
     ".": {
       "default": "./dist/mod.js",
       "types": "./dist/mod.d.ts"
     }
   },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc -p ./lib/tsconfig.json",
