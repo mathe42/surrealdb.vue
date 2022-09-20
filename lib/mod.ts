@@ -17,7 +17,7 @@ interface VueReturn<T> {
 
 function createEmptyReturn<T>(reload: () => void): VueReturn<T> {
   return {
-    loading: ref(false),
+    loading: ref(true),
     data: shallowRef<T[] | null>(null),
     error: ref<any>(null),
     reload
