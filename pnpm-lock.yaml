@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@vitejs/plugin-vue': 3.1.0
-  surrealdb.js: 0.4.0
+  surrealdb.js: 0.5.0
   typescript: 4.8.3
   vite: 3.1.3
   vue: 3.2.39
@@ -10,7 +10,7 @@ specifiers:
 
 devDependencies:
   '@vitejs/plugin-vue': 3.1.0_vite@3.1.3+vue@3.2.39
-  surrealdb.js: 0.4.0
+  surrealdb.js: 0.5.0
   typescript: 4.8.3
   vite: 3.1.3
   vue: 3.2.39
@@ -205,14 +205,6 @@ packages:
 
   /@vue/shared/3.2.39:
     resolution: {integrity: sha512-D3dl2ZB9qE6mTuWPk9RlhDeP1dgNRUKC3NJxji74A4yL8M2MwlhLKUC/49WHjrNzSPug58fWx/yFbaTzGAQSBw==}
-    dev: true
-
-  /bufferutil/4.0.6:
-    resolution: {integrity: sha512-jduaYOYtnio4aIAyc6UbvPCVcgq7nYpVnucyxr6eCYg/Woad9Hf/oxxBRDnGGjPfjUm6j5O/uBWhIu4iLebFaw==}
-    engines: {node: '>=6.14.2'}
-    requiresBuild: true
-    dependencies:
-      node-gyp-build: 4.5.0
     dev: true
 
   /csstype/2.6.21:
@@ -473,7 +465,7 @@ packages:
     peerDependencies:
       ws: '*'
     dependencies:
-      ws: 8.8.1_22kvxa7zeyivx4jp72v2w3pkvy
+      ws: 8.8.1
     dev: true
 
   /lru-cache/6.0.0:
@@ -492,11 +484,6 @@ packages:
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-    dev: true
-
-  /node-gyp-build/4.5.0:
-    resolution: {integrity: sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==}
     hasBin: true
     dev: true
 
@@ -561,14 +548,14 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /surrealdb.js/0.4.0:
-    resolution: {integrity: sha512-syE9rd3UNo8OrDP2cBdB7AdksJzjDT4ouWbZt8tjL/qCteY/TvIBNo6MdceBwMMyctsig7aap+1wNBpaTXz5Xg==}
+  /surrealdb.js/0.5.0:
+    resolution: {integrity: sha512-CpDfCwVnG3ahr2/kUf3i9RgDtLuEzQeU5Zxuhtud5Ijq9abXzkAhS/gcvtSQ9qyZiqSQcp4u7IK3yjnd1OkqKQ==}
     dependencies:
       isomorphic-ws: 5.0.0_ws@8.8.1
-      ws: 8.8.1_22kvxa7zeyivx4jp72v2w3pkvy
-    optionalDependencies:
-      bufferutil: 4.0.6
-      utf-8-validate: 5.0.9
+      ws: 8.8.1
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
     dev: true
 
   /to-fast-properties/2.0.0:
@@ -580,14 +567,6 @@ packages:
     resolution: {integrity: sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
-
-  /utf-8-validate/5.0.9:
-    resolution: {integrity: sha512-Yek7dAy0v3Kl0orwMlvi7TPtiCNrdfHNd7Gcc/pLq4BLXqfAmd0J7OWMizUQnTTJsyjKn02mU7anqwfmUP4J8Q==}
-    engines: {node: '>=6.14.2'}
-    requiresBuild: true
-    dependencies:
-      node-gyp-build: 4.5.0
     dev: true
 
   /vite/3.1.3:
@@ -638,7 +617,7 @@ packages:
       '@vue/shared': 3.2.39
     dev: true
 
-  /ws/8.8.1_22kvxa7zeyivx4jp72v2w3pkvy:
+  /ws/8.8.1:
     resolution: {integrity: sha512-bGy2JzvzkPowEJV++hF07hAD6niYSr0JzBNo/J29WsB57A2r7Wlc1UFcTR9IzrPvuNVO4B8LGqF8qcpsVOhJCA==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -649,9 +628,6 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
-    dependencies:
-      bufferutil: 4.0.6
-      utf-8-validate: 5.0.9
     dev: true
 
   /yallist/4.0.0:
