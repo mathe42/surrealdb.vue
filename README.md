@@ -1,3 +1,6 @@
+> No longer maintained. Replaced by surrealdb.worker.
+> You are creating a surrealdb client lib for vue? Contact me and I will propably give you the `surrealdb.vue` npm package!
+
 # Surrealdb.vue
 This is a surrealdb client build for VueJS!
 
